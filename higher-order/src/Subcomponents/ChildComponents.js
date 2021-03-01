@@ -18,7 +18,7 @@ function ChildComponents() {
   return (
     <div>
       Hello child components
-      <Button text="Decrease counter" handleClick={IncreaseByOne} />
+      <Button text="Increase counter" handleClick={IncreaseByOne} />
       <Button text="Reset counter" handleClick={ResetCounter} />
       <Display counter={counter} />
     </div>

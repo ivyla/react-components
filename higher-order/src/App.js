@@ -2,6 +2,7 @@ import "./App.css";
 import React, { useState } from "react";
 import "./Subcomponents/ChildComponents";
 import ChildComponents from "./Subcomponents/ChildComponents";
+import ComplexState from "./Subcomponents/ComplexState";
 // Use hooks to init the state for the click right and click left buttons
 // Use the spread syntax to initialize and assign the props {//variables here//}
 
@@ -13,6 +14,9 @@ function App() {
       {/* ChildComponents.js */}
       <div>
         <ChildComponents />
+      </div>
+      <div>
+        <ComplexState />
       </div>
     </div>
   );
