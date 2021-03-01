@@ -3,6 +3,7 @@ import React, { useState } from "react";
 // Let's refactor our application so that it's
 // composed of three smaller components, one component
 //  for displaying the counter and two components for buttons.
+// Not using spread syntax yet, just destructuring as a way to receive props
 
 const Button = ({ text, handleClick }) => (
   <button onClick={handleClick}> {text} </button>
