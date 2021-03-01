@@ -1,18 +1,19 @@
 import "./App.css";
 import React, { useState } from "react";
+import "./Subcomponents/ChildComponents";
+import ChildComponents from "./Subcomponents/ChildComponents";
 // Use hooks to init the state for the click right and click left buttons
 // Use the spread syntax to initialize and assign the props {//variables here//}
 
-const Increase = ({ increase, currentNum }) => (
-  <button onClick={increase}> {currentNum} </button>
-);
-
 function App() {
-  const [counter, setCounter] = useState(0);
   return (
     <div>
-      Hello world!
-      <Increase currentNum={counter} increase={() => setCounter(counter + 1)} />
+      simple example with spread operator
+      {/* <Increase currentNum={firstCounter} increase={() => firstCounter(firstCounter + 1)} /> */}
+      {/* ChildComponents.js */}
+      <div>
+        <ChildComponents />
+      </div>
     </div>
   );
 }
