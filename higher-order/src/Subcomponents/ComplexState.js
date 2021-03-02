@@ -3,27 +3,31 @@ import React, { useState } from "react";
 // Very basic practice with updating the object
 
 const ComplexState = () => {
-  const [clicks, setClicks] = useState({ left: 0, right: 0 });
+    const [left, setLeft] = useState(0);
+    const [right, setRight] = useState(0);
 
-  const handleLeftClick = () => {
-    const newClicks = {
-      ...clicks,
-      left: clicks.left + 1,
+    const [allClicks, setClicks] = useState([]);
+
+    const handleLeft = () => {
+        setLeft(left + 1);
+        setClicks(allClicks.concat("L"));
     };
-    setClicks(newClicks);
-  };
 
-  const handleRightClick = () => {
-    setClicks({ ...clicks, right: clicks.right + 1 });
-  };
-  return (
-    <div>
-      <button onClick={handleLeftClick}> Left </button>
-      <p> left: {clicks.left} </p>
-      <button onClick={handleRightClick}> Right </button>
-      <p> right: {clicks.right} </p>
-    </div>
-  );
+    const handleRight = () => {
+        setRight(right + 1);
+        setClicks(allClicks.concat("R"));
+    };
+
+    return (
+        <div>
+            <button onClick={handleLeft}> Left </button>
+            <p> left: {left} </p>
+            <button onClick={handleRight}> Right </button>
+            <p> right: {right} </p>
+
+            {allClicks.join("")}
+        </div>
+    );
 };
 
 export default ComplexState;
